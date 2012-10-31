@@ -12,17 +12,25 @@ namespace RegexExpresstionTester
 {
    public partial class RegexExpressionTester : Form
    {
-      private class TimerController
+      private class LabelController
       {
          private Timer _timer;
          private Label _label;
+         private int blueWithGreen = 0;
          private readonly int fadeStep = 10;
 
-         public TimerController(Timer timer, Label label)
+         public LabelController(Timer timer, Label label)
          {
             _timer = timer;
             _label = label;
             _timer.Tick += new EventHandler(_timer_Tick);
+            _label.Paint += new PaintEventHandler(_label_Paint);
+            _label.BorderStyle = BorderStyle.None;
+         }
+
+         void _label_Paint(object sender, PaintEventArgs e)
+         {
+            System.Windows.Forms.Application.DoEvents();
          }
 
          public void SetText(string text)
@@ -34,23 +42,25 @@ namespace RegexExpresstionTester
 
          void _timer_Tick(object sender, EventArgs e)
          {
-            if (_label.ForeColor.A <= fadeStep)
+            if (blueWithGreen + fadeStep >= 255)
             {
-               _label.ForeColor = Color.FromArgb(0, Color.Red);
+               _label.ForeColor = Color.FromArgb(255, 255, 255);
                _timer.Enabled = false;
+               blueWithGreen = 0;
                return;
             }
 
-            _label.ForeColor = Color.FromArgb(_label.ForeColor.A - fadeStep, Color.Red);
+            blueWithGreen += fadeStep;
+            _label.ForeColor = Color.FromArgb(255, blueWithGreen, blueWithGreen);
          }
       }
 
-      private TimerController _timerController;
+      private LabelController _labelController;
 
       public RegexExpressionTester()
       {
          InitializeComponent();
-         _timerController = new TimerController(LabelTimer, lblResult);
+         _labelController = new LabelController(LabelTimer, lblResult);
       }
 
       private void btnTest_Click(object sender, EventArgs e)
@@ -59,11 +69,11 @@ namespace RegexExpresstionTester
 
          if (expression.IsMatch(txtTestText.Text))
          {
-            _timerController.SetText("Match!!!!!");
+            _labelController.SetText("Match!!!!!");
          }
          else
          {
-            _timerController.SetText("Not Match!!!!");
+            _labelController.SetText("Not Match!!!!");
          }
       }
    }
