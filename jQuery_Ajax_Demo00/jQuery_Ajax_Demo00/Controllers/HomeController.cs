@@ -14,6 +14,13 @@ namespace jQuery_Ajax_Demo00.Controllers
 			ViewData ["Message"] = "Welcome to ASP.NET MVC on Mono!";
 			return View ();
 		}
+
+		public JsonResult GetCustomer()
+		{
+			var customers = new []{ "Namco", "Konami", "Capcom", "Bandai", "Square Enix", "EA" };
+
+			return Json(customers, JsonRequestBehavior.AllowGet);
+		}
 	}
 }
 

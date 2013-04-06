@@ -4,23 +4,18 @@
 <head runat="server">
 	<title></title>
 	<script src="Scripts/jquery-1.9.1.js" type="text/javascript" ></script>
-	<script type="text/javascript">
-	$(document).ready(function(){
-		//alert("jQuery works!");
-		$("#ScrollList")[0].innerText = "Test Text";
-		$('#CustomerBrowser').click(function(){
-			alert("Browse for customer");
-		});
-	});
-	</script>
+	<script src="Scripts/Index.js" type="text/javascript" ></script>
+	<link href="../../Content/Site.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 	<div>
 		<%= Html.Encode(ViewData["Message"]) %>
 	</div>
 	Customer: 
-	<input id="customer" type="text" /><input id="CustomerBrowser" type="button" value="Browse..."/>
-	<div id="ScrollList">
+	<div id="dropDown" class="drop-Down">
+		<input id="customer" type="text" /><input id="CustomerBrowser" type="button" value="Browse..."/>
+		<div id="list">
+		</div>
 	</div>
 </body>
-
+</html>
