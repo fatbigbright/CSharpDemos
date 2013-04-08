@@ -17,5 +17,6 @@
 		<div id="list">
 		</div>
 	</div>
+   <input id="another" value="Another" type="button" />
 </body>
 </html>

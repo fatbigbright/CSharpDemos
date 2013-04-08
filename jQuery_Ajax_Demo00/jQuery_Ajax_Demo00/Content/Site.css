@@ -336,7 +336,7 @@ div#title {
 {
    background-color: Silver;
    width: 100px;
-   height: 50px;
+   height: 80px;
    float: left;
    position: absolute;
    overflow-y: scroll;
@@ -347,6 +347,17 @@ div#title {
    padding-left: 200px;
    width: 350px;
    height: auto;
+}
+
+.itemLeaved
+{
+   background-color: Silver;
+}
+
+.itemPointed
+{
+   background-color: Blue;
+   cursor: pointer;
 }
 
 .customer

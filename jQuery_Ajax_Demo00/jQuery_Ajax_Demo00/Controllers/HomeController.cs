@@ -17,7 +17,9 @@ namespace jQuery_Ajax_Demo00.Controllers
 
 		public JsonResult GetCustomer()
 		{
-			var customers = new []{ "Namco", "Konami", "Capcom", "Bandai", "Square Enix", "EA" };
+            var customers = new []{ "Namco", "Konami", "Capcom", "Bandai", "SEGA"
+                                  , "Square Enix", "EA", "Level-5", "Tri-Ace", "Saint Monica"
+                                  , "Naughty Dog", "SCE", "Microsoft", "Nitendo" };
 
 			return Json(customers, JsonRequestBehavior.AllowGet);
 		}
