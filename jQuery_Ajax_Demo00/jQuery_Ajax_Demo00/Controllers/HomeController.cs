@@ -23,6 +23,14 @@ namespace jQuery_Ajax_Demo00.Controllers
 
 			return Json(customers, JsonRequestBehavior.AllowGet);
 		}
+
+      public JsonResult GetGames()
+      {
+         var games = new []{ "Metal Gear Solid", "Final Fantasy", "Super Robot War", "Dragon Quest"
+                           , "Assassin Creed", "God of War"};
+
+         return Json(games, JsonRequestBehavior.AllowGet);
+      }
 	}
 }
 

@@ -4,6 +4,7 @@
 <head runat="server">
 	<title></title>
 	<script src="Scripts/jquery-1.9.1.js" type="text/javascript" ></script>
+    <script src="Scripts/dropDownList.js" type="text/javascript" ></script>
 	<script src="Scripts/Index.js" type="text/javascript" ></script>
 	<link href="../../Content/Site.css" rel="stylesheet" type="text/css" />
 </head>
@@ -13,10 +14,14 @@
 	</div>
 	Customer: 
 	<div id="dropDown" class="drop-Down">
-		<input id="customer" type="text" /><input id="CustomerBrowser" type="button" value="Browse..."/>
+		<input id="customer" type="text" /><input id="CustomerBrowser" class="dropDownBrowser" type="button" value="..."/>
 		<div id="list">
 		</div>
 	</div>
+   <div id="dropDown2" class="drop-Down">
+      <input id="game" type="text" /><input id="gameBrowser" class="dropDownBrowser" type="button" value="..." />
+      <div id="gameList"></div>
+   </div>
    <input id="another" value="Another" type="button" />
 </body>
 </html>
