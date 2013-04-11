@@ -2,7 +2,6 @@
    var customers = $('#list');
    var games = $('#gameList');
    
-   var lists = { $('#list'), $('#gameList') };
    $(this).click(function(event){
        var e = event || window.event;
        var elem = e.srcElement || e.target;
