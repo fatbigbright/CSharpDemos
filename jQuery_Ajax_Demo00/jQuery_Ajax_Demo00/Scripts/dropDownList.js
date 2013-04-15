@@ -38,3 +38,14 @@ function setUpDropDownList(textboxID, dropDownDivID, browseButtonID, requestUrl)
       });
    });
 }
+
+function hideDropDownList(event){
+   var e = event || window.event;
+   var elem = e.srcElement || e.target;
+   if(elem != null && elem.className == 'loadedList')
+      return;
+
+   $('.loadedList').each(function(){
+      $(this).hide();
+   });
+}
