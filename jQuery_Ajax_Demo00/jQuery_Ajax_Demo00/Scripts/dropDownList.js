@@ -8,6 +8,7 @@ function setUpDropDownList(textboxID, dropDownDivID, browseButtonID, requestUrl)
          url: requestUrl,
          dataType: 'json',
          error: function (error) {
+            list.hide();
             alert('Error occurs');
          },
          success: function (data) {

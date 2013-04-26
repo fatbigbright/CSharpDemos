@@ -22,6 +22,10 @@
       <input id="game" type="text" /><input id="gameBrowser" class="dropDownBrowser" type="button" value="..." />
       <div id="gameList"></div>
    </div>
+   <div id="dropDown3" class="drop-Down">
+      <input id="remoteGame" type="text" /><input id="remoteGameBrowser" class="dropDownBrowser" type="button" value="..." />
+      <div id="remoteGameList"></div>
+   </div>
    <input id="another" value="Another" type="button" />
 </body>
 </html>
