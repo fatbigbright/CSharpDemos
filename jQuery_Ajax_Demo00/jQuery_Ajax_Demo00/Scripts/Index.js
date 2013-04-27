@@ -15,6 +15,7 @@
 
    setUpDropDownList('#game', '#gameList', '#gameBrowser', 'Home/GetGames');
    
+   setUpDropDownList('#remoteGame', '#remoteGameList', '#remoteGameBrowser', 'Home/GetRemoteGames');
    //cross-site access may be denied and returned status code 0, needs modification
-   setUpDropDownList('#remoteGame', '#remoteGameList', '#remoteGameBrowser', 'http://localhost:3000/getData');
+   //setUpDropDownListFromOtherSite('#remoteGame', '#remoteGameList', '#remoteGameBrowser', 'http://localhost:3000/getData');
 });

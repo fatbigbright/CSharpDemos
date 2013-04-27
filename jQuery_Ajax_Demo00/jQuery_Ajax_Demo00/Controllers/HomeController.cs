@@ -31,6 +31,23 @@ namespace jQuery_Ajax_Demo00.Controllers
 
          return Json(games, JsonRequestBehavior.AllowGet);
       }
+      public JsonResult GetRemoteGames()
+      {
+         using(var webClient = new System.Net.WebClient())
+         {
+            string json = webClient.DownloadString(@"http://localhost:3000/getData");
+
+            //parse the string into Array
+            string[] games = json.Replace("[","").Replace("]","").Split(',');
+            List<string> result = new List<string>();
+            foreach(string item in games)
+            {
+               result.Add(item.Replace("\"",""));
+            }
+
+            return Json (result, JsonRequestBehavior.AllowGet);
+         }
+      }
 	}
 }
 

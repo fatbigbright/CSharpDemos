@@ -1,9 +1,32 @@
+function setUpDropDownListFromOtherSite(textboxID, dropDownDivID, browseButtonID, requestUrl){
+   var list = $(dropDownDivID);
+   $(browseButtonID).click(function(){
+      list.removeClass("loadedList").addClass("loadingList");
+      list[0].innerText = "Loading...";
+      
+      $.ajax({
+         url: String.format('{0}?callback=?', requestUrl),
+         type: 'GET',
+         dataType: 'jsonp',
+         jsonp: 'callback',
+         error: function(error){
+            alert(error);
+         },
+         success: function(data){
+            alert(data);
+         }
+      });
+   });
+}
+
+
 //textboxID, dropDownDivID, browseButtonID should in the form of '#XXXX'
 function setUpDropDownList(textboxID, dropDownDivID, browseButtonID, requestUrl){
    var list = $(dropDownDivID);
    $(browseButtonID).click(function () {
       list.removeClass("loadedList").addClass("loadingList");
       list[0].innerText = "Loading...";
+      
       $.ajax({
          url: requestUrl,
          dataType: 'json',

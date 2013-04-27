@@ -13,6 +13,8 @@
    * Mission to be completed: 
      * Modify Index.js to encapsulate the dropDownList function so that it can be commonly used. - first version of dropDownList.js has been created and reconstructed.
      * Test whether 2 or more customized dropDownLists may conflict with each other. - not conflict
+   
+   * Successfully access FBB_Data_Provider website JSON by retrieving data by server code.
 
 4. jQuery_Ajax_Demo01
    A demo that implements a list using ajax and jQuery to load data from server(maybe server cache would be added in the future). Created and built under VS2010.
