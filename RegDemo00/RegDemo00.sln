@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegDemo00", "RegDemo00\RegDemo00.csproj", "{DF88DC1D-8A79-49AB-9F3C-291DA29ABFCF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DF88DC1D-8A79-49AB-9F3C-291DA29ABFCF}.Debug|x86.ActiveCfg = Debug|x86
+		{DF88DC1D-8A79-49AB-9F3C-291DA29ABFCF}.Debug|x86.Build.0 = Debug|x86
+		{DF88DC1D-8A79-49AB-9F3C-291DA29ABFCF}.Release|x86.ActiveCfg = Release|x86
+		{DF88DC1D-8A79-49AB-9F3C-291DA29ABFCF}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

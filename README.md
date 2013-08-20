@@ -18,3 +18,6 @@
 
 4. jQuery_Ajax_Demo01
    A demo that implements a list using ajax and jQuery to load data from server(maybe server cache would be added in the future). Created and built under VS2010.
+
+5. RegDemo00
+   A demo that implements reading/writing Registry key-value.
