@@ -16,8 +16,11 @@
    
    * Successfully access FBB_Data_Provider website JSON by retrieving data by server code.
 
-4. jQuery_Ajax_Demo01
+4. jQuery_Ajax _Demo01
    A demo that implements a list using ajax and jQuery to load data from server(maybe server cache would be added in the future). Created and built under VS2010.
 
 5. RegDemo00
    A demo that implements reading/writing Registry key-value.
+   
+6. DelegateDemo00
+    A demo that demonstrates `Action<T>` delegate.
