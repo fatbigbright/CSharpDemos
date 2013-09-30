@@ -19,8 +19,10 @@
 4. jQuery_Ajax _Demo01
    A demo that implements a list using ajax and jQuery to load data from server(maybe server cache would be added in the future). Created and built under VS2010.
 
-5. RegDemo00
+5. RegDemo00   
    A demo that implements reading/writing Registry key-value.
    
-6. DelegateDemo00
-    A demo that demonstrates `Action<T>` delegate.
+6. DelegateDemo00  
+   A demo that demonstrates `Action<T>` delegate.
+7. NetServerDemo   
+   Using different network protocols to implement a server which returns a simple http response of a "Hello World" web page.
