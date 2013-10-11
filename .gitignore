@@ -1,0 +1,10 @@
+*.exe
+*.pdb
+*.dll
+*.swp
+*.suo
+.gitignore~
+*.exe.manifest
+*.cache
+*.user
+*.FileListAbsolute.txt
