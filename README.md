@@ -29,3 +29,6 @@
    
 8. MessagePump   
    WPF demo to test async/await, build under VS2012.
+   
+9. GameOfLife   
+   QClub Code Retreat Agile TDD exercise.
