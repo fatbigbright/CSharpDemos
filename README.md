@@ -30,5 +30,11 @@
 8. MessagePump   
    WPF demo to test async/await, build under VS2012.
    
+
+
 9. GameOfLife   
+   
    QClub Code Retreat Agile TDD exercise.
+
+10.AnimationDemo
+   Demo for animation created by WPF, can used for Game of Life or Tetris. Still needs refactoring. 
