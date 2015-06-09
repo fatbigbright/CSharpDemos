@@ -15,6 +15,8 @@ using System.Windows.Shapes;
 
 namespace AnimationDemo
 {
+    using debug = System.Diagnostics.Debug;
+    using sandbox = ArraySandBox.ArraySandBox;
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
@@ -38,19 +40,13 @@ namespace AnimationDemo
         private void InitializeMatrix()
         {
             matrix = new int[MAX_LINE, MAX_COL];
+            debug.WriteLine("Max Line: {0}, Max column: {1}", matrix.GetLength(0), matrix.GetLength(1));
             RandomSetupMatrix();
         }
 
         private void RandomSetupMatrix()
         {
-            Random rand = new Random();
-            for (int line = 0; line < MAX_LINE; line++)
-            {
-                for (int column = 0; column < MAX_COL; column++)
-                {
-                    matrix[line, column] = rand.Next() % 2;
-                }
-            }
+            matrix = sandbox.CalculateRandomly(matrix);
         }
 
         private void RenderCanvas()
