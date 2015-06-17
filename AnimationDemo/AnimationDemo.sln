@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimationDemo", "AnimationDemo\AnimationDemo.csproj", "{14D83186-85B7-4338-B698-8E044E1D541C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArraySandBox", "ArraySandBox\ArraySandBox.csproj", "{6130B50F-4AE6-439F-942E-F454C5588FAF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameOfLifeTest", "GameOfLifeTest\GameOfLifeTest.csproj", "{AAC6F531-4359-4B2B-9945-3F8870E03F56}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{6130B50F-4AE6-439F-942E-F454C5588FAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6130B50F-4AE6-439F-942E-F454C5588FAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6130B50F-4AE6-439F-942E-F454C5588FAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAC6F531-4359-4B2B-9945-3F8870E03F56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAC6F531-4359-4B2B-9945-3F8870E03F56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAC6F531-4359-4B2B-9945-3F8870E03F56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAC6F531-4359-4B2B-9945-3F8870E03F56}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

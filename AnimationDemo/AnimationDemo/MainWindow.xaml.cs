@@ -24,8 +24,8 @@ namespace AnimationDemo
     {
         private int[,] matrix;
 
-        private readonly int MAX_LINE = 10;
-        private readonly int MAX_COL = 10;
+        private const int MAX_LINE = 10;
+        private const int MAX_COL = 10;
         private readonly double T_WIDTH = 30d;
         private readonly double T_HEIGHT = 30d;
 
@@ -47,6 +47,10 @@ namespace AnimationDemo
         private void RandomSetupMatrix()
         {
             matrix = sandbox.CalculateRandomly(matrix);
+        }
+        private void SetupGameOfLife()
+        {
+            matrix = sandbox.GetGameOfLifeNextStep(matrix);
         }
 
         private void RenderCanvas()
@@ -75,7 +79,8 @@ namespace AnimationDemo
         {
             _timer.Tick += delegate(object sender, EventArgs e)
             {
-                RandomSetupMatrix();
+                //RandomSetupMatrix();
+                SetupGameOfLife();
                 RenderCanvas();
             };
             _timer.Interval = new TimeSpan(0, 0, 1);
