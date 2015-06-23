@@ -37,3 +37,6 @@
 
 10. AnimationDemo   
    Demo for animation created by WPF, can used for Game of Life or Tetris. Still needs refactoring. 
+   
+11. MVVMDemo
+   Example to demonstrate MVVM pattern.
