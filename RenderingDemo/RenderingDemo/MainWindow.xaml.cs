@@ -21,8 +21,8 @@ namespace RenderingDemo
     public partial class MainWindow : Window
     {
         private int _frameCount = 0;
-        private System.Diagnostics.Stopwatch _stopWatch = new System.Diagnostics.Stopwatch();
-        private long _tempElaspedMilliSecond = 0;
+        private double _secondCounter = 0d;
+        private TimeSpan _lastRender;
         public MainWindow()
         {
             InitializeComponent();
@@ -31,22 +31,19 @@ namespace RenderingDemo
 
         private void CustomInitializeComponent()
         {
+            //MediaTimeline.DesiredFrameRateProperty.OverrideMetadata(typeof(MediaTimeline), new FrameworkPropertyMetadata { DefaultValue = 30 });
+            _lastRender = new TimeSpan(0, 0, 0, 0, 0);
             CompositionTarget.Rendering += (sender, args) =>
             {
-                if (_stopWatch.IsRunning && _stopWatch.ElapsedMilliseconds - _tempElaspedMilliSecond < 22)
-                    return;
-                /*
-                RenderingEventArgs rArgs = args as RenderingEventArgs;
-                if (rArgs == null) return;
-                */
-                if (_frameCount++ == 0)
-                {
-                    _stopWatch.Start();
-                }
+                RenderingEventArgs renderArgs = args as RenderingEventArgs;
+                Double deltaTime = (renderArgs.RenderingTime - _lastRender).TotalSeconds;
+                //if (deltaTime < 0.022) return;
 
-                _tempElaspedMilliSecond = _stopWatch.ElapsedMilliseconds;
+                _lastRender = renderArgs.RenderingTime;
+                _secondCounter += deltaTime;
+                _frameCount++;
 
-                long frameRate = (long)(_frameCount / _stopWatch.Elapsed.TotalSeconds);
+                long frameRate = (long)(_frameCount / renderArgs.RenderingTime.TotalSeconds);
                 if (frameRate > 0)
                 {
                     this.lblFPS.Content = frameRate.ToString();
