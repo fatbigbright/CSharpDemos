@@ -37,3 +37,6 @@
 
 10. AnimationDemo   
    Demo for animation created by WPF, can used for Game of Life or Tetris. Still needs refactoring. 
+
+11. RenderingDemo & TimerDemo
+   Demos to try to gain a steady frame rate of per-frame canvas animation, but it seems impossible in WPF.
