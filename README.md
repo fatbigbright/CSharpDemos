@@ -1,3 +1,4 @@
+
 ## This repository contains all my C# demos that is supposed to be useful.
 
 1. MultiThreadDemo00
@@ -30,13 +31,17 @@
 8. MessagePump   
    WPF demo to test async/await, build under VS2012.
    
-
-
 9. GameOfLife   
    QClub Code Retreat Agile TDD exercise.
 
 10. AnimationDemo   
    Demo for animation created by WPF, can used for Game of Life or Tetris. Still needs refactoring. 
 
-11. RenderingDemo & TimerDemo
+
+11. MVVMDemo
+
+   Example to demonstrate MVVM pattern.
+
+
+12. RenderingDemo & TimerDemo
    Demos to try to gain a steady frame rate of per-frame canvas animation, but it seems impossible in WPF.
