@@ -31,7 +31,6 @@ namespace RenderingDemo
 
         private void CustomInitializeComponent()
         {
-            //MediaTimeline.DesiredFrameRateProperty.OverrideMetadata(typeof(MediaTimeline), new FrameworkPropertyMetadata { DefaultValue = 30 });
             _lastRender = new TimeSpan(0, 0, 0, 0, 0);
             CompositionTarget.Rendering += (sender, args) =>
             {
